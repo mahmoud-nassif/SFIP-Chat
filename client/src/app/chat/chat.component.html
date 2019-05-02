@@ -1,0 +1,21 @@
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>USERS</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td *ngIf="getUser()!=user.username">{{user.username}}</td>
+      <td *ngIf="getUser()!=user.username">{{user.email}}</td>
+      <td *ngIf="getUser()!=user.username">
+        <button class="btn btn-primary w-75" routerLink="/chatroom" 
+         [queryParams]="{username:user.username,email:user.email}">chat room with him
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

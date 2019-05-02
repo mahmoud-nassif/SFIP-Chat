@@ -1,0 +1,33 @@
+<div class="container">
+  <form action="" method="POST" role="form">
+    <legend>Sign Up</legend>
+
+    <div *ngIf="usernameIsEmpty" class="alert alert-danger">
+      Username is required
+    </div>
+    <div *ngIf="emailIsEmpty" class="alert alert-danger">
+      Email is required
+    </div>
+    <div *ngIf="passwordIsEmpty" class="alert alert-danger">
+      Password is required
+    </div>
+  
+    <div class="form-group">
+      <label for="username">username</label>
+      <input [(ngModel)]="username" type="text" class="form-control" id="username" name="username" placeholder="username">
+    </div>
+
+    <div class="form-group">
+      <label for="email">email</label>
+      <input [(ngModel)]="email" type="text" class="form-control" id="email" name="email" placeholder="email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">password</label>
+      <input [(ngModel)]="password" type="text" class="form-control" id="password" name="password" placeholder="password">
+    </div>
+
+    <button (click)="submitForm()" type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+  
+</div>
